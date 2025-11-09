@@ -22,5 +22,5 @@
 <h3>Executar a API<h3>
 
 ```bash
-    node index.js
+    node server.js
 ```
