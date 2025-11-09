@@ -1,11 +1,13 @@
 import { PrismaClient } from '@prisma/client';
+import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
+
 
 const prisma = new PrismaClient();
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 app.post('/Usuarios', async (req, res) => {
   try {
     const created = await prisma.user.create({
